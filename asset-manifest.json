@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spotify-songs-search-App/static/css/main.f70e1b7e.css",
+    "main.js": "/spotify-songs-search-App/static/js/main.b1c91422.js",
+    "static/js/787.39081915.chunk.js": "/spotify-songs-search-App/static/js/787.39081915.chunk.js",
+    "index.html": "/spotify-songs-search-App/index.html",
+    "main.f70e1b7e.css.map": "/spotify-songs-search-App/static/css/main.f70e1b7e.css.map",
+    "main.b1c91422.js.map": "/spotify-songs-search-App/static/js/main.b1c91422.js.map",
+    "787.39081915.chunk.js.map": "/spotify-songs-search-App/static/js/787.39081915.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f70e1b7e.css",
+    "static/js/main.b1c91422.js"
+  ]
+}
