@@ -4,8 +4,7 @@ import Pagination from "./components/pagination";
 function App() {
   //spotify client data and auth page
   const CLIENT_ID = "4f9db3f78fea42dab9677a85e2f540ad";
-  const REDIRECT_URI =
-    "https://cristhiandcl.github.io/spotify-songs-search-App";
+  const REDIRECT_URI = "http://localhost:3000/";
   const AUTH_ENDPOINT = "http://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
@@ -16,7 +15,7 @@ function App() {
 
   //states to control pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const songsPerPage = 8;
+  const songsPerPage = 10;
 
   //getting the user token on login
   useEffect(() => {
@@ -104,9 +103,17 @@ function App() {
   ));
 
   return (
-    <div className={`text-green-500 font-bold text-center p-2 bg-green-100`}>
+    <div
+      className={`text-green-500 font-bold text-center bg-green-100 ${
+        songs.length > 0 && "py-8"
+      }`}
+    >
       {token ? (
-        <div className="flex flex-col justify-center items-center space-x-2 h-screen">
+        <div
+          className={`flex flex-col justify-center items-center space-x-2 ${
+            songs.length === 0 && "h-screen"
+          }`}
+        >
           <div className="flex space-x-2 items-baseline">
             <p className="text-xl">Type down any song you want to listen</p>
             <button
@@ -130,7 +137,7 @@ function App() {
                 Search
               </button>
             </form>
-            <div className="render-songs grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-2">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-2">
               {renderSongs}
             </div>
             {songs.length > 0 && (
@@ -145,7 +152,7 @@ function App() {
           </>
         </div>
       ) : (
-        <div className="flex flex-col justify-center h-screen items-center">
+        <div className="flex flex-col justify-center items-center h-screen">
           <p className="text-6xl mb-4 animate-pulse">
             Spotify Songs Search App
           </p>
