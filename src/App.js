@@ -4,7 +4,8 @@ import Pagination from "./components/pagination";
 function App() {
   //spotify client data and auth page
   const CLIENT_ID = "4f9db3f78fea42dab9677a85e2f540ad";
-  const REDIRECT_URI = "http://localhost:3000";
+  const REDIRECT_URI =
+    "https://cristhiandcl.github.io/spotify-songs-search-App";
   const AUTH_ENDPOINT = "http://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
@@ -12,7 +13,7 @@ function App() {
   const [token, setToken] = useState("");
   const [searchKey, setSearchKey] = useState("");
   const [songs, setSongs] = useState([]);
-  
+
   //states to control pagination
   const [currentPage, setCurrentPage] = useState(1);
   const songsPerPage = 8;
